@@ -14,7 +14,7 @@ public class Tests {
     public static void main(String[] args) {
 
         char[] miArrayCaracteres = new char[20];
-
+        //muestra array vacío
         System.out.println(Arrays.toString(miArrayCaracteres));
 
         int aleatorio;  //0 al 3
@@ -23,7 +23,7 @@ public class Tests {
         for (int i = 0; i < miArrayCaracteres.length; i++) { //19
 
             //min + Math.random()*(max - min)
-            aleatorio = (int) (Math.random() * 4); //paréntesis
+            aleatorio = (int) (Math.random() * 4); //Math.random entre paréntesis para castear a int
 
             switch (aleatorio) {
                 case 0:
@@ -41,7 +41,7 @@ public class Tests {
             }
 
         }
-
+        //muestra el array relleno
         System.out.println(Arrays.toString(miArrayCaracteres));
 
         for (int i = 0; i < miArrayCaracteres.length - 1 && !encontrado; i++) {
@@ -50,13 +50,13 @@ public class Tests {
 
                 encontrado = true;
                 System.out.println("encontrado " + i + " " + (i + 1));
-                miArrayCaracteres[i] = 'o';
+                miArrayCaracteres[i] = 'o';// cambio las letras a minúsculas para que se diferencien mejor
                 miArrayCaracteres[i + 1] = 'x';
 
             }
 
         }
-
+//Hace lo mismo con un bucle anidado
 //        for (int i = 0; (i < miArrayCaracteres.length - 1); i++) {
 //            for (int j = i + 1; j < miArrayCaracteres.length && !encontrado; j++) {
 //
@@ -81,3 +81,4 @@ public class Tests {
 
     }
 }
+
