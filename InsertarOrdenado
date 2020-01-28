@@ -1,0 +1,11 @@
+boolean realizado = false;
+for (int i = 0; i < fechas.length && !realizado; i++) {
+                if (nuevaFecha.isBefore(fechas[i])) {
+                    int pos = (i > 0) ? i - 1 : i; //Si la primera fecha ya es mayor que la que introducimos
+                    //machacamos la primera.
+                    fechas[pos] = nuevaFecha;
+                    realizado = true; //Como ya está hecho... salimos del bucle (prohibido break).
+                } else if (i == fechas.length - 1 && nuevaFecha.isAfter(fechas[i])) {
+                    fechas[i] = nuevaFecha;
+                }
+            } 
